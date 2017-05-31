@@ -1,6 +1,6 @@
 # FXClub
 ## Introducción
-Proyecto creado por los alumnos de ingeniería informática de la UJI Alberto González (@agonper) y Daniel Chía (@dnchia), para la asignatura EI1048 del grado.
+Proyecto creado por los alumnos de ingeniería informática de la UJI Alberto González ([@albertogonper](https://github.com/albertogonper)) y Daniel Chía ([@dnchia](https://github.com/dnchia)), para la asignatura EI1048 del grado.
 ## Requisitos previos
 BBDD MySQL, versión 5.x, preferiblemente 5.7
 1. Bien mediante una instalación local
