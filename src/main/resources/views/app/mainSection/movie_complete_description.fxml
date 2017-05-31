@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uji.agdc.videoclub.controllers.MovieCompleteDescriptionController">
+   <top>
+      <BorderPane prefHeight="110.0" prefWidth="460.0" BorderPane.alignment="CENTER">
+         <top>
+            <VBox alignment="TOP_CENTER" prefHeight="110.0" prefWidth="460.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="movieData_title_label" text="Titulo">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="movieData_titleVO_label" text="Titulo VO">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="movieData_year_label" text="Año de estreno: ">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin></Label>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin></Separator>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+      </BorderPane>
+   </top>
+   <bottom>
+      <BorderPane prefHeight="40.0" prefWidth="460.0" BorderPane.alignment="CENTER">
+         <left>
+            <Button fx:id="movieData_close_button" mnemonicParsing="false" onAction="#closeWindow" text="Cerrar" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Button fx:id="movieData_rent_button" mnemonicParsing="false" onAction="#rentMovie" text="Alquilar" BorderPane.alignment="CENTER" />
+         </right>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="20.0" right="20.0" />
+         </BorderPane.margin>
+      </BorderPane>
+   </bottom>
+   <center>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </BorderPane.margin>
+         <content>
+            <VBox prefHeight="380.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="movieData_actors_label" text="Actores principales: ">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="10.0" top="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="movieData_directors_label" text="Director/es: ">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="10.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="movieData_generes_label" text="Géneros: ">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="10.0" />
+                     </VBox.margin></Label>
+                  <Label text="Sinopsis: ">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextArea fx:id="movieData_description_textArea" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <Label fx:id="movieData_copies_label" text="Copias disponibles: ">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children></VBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

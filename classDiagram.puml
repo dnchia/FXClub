@@ -1,0 +1,19 @@
+@startuml
+
+package models {
+    interface User
+    class Partner implements User
+    class Administrator implements User
+    class Movie
+    enum Licences
+}
+
+package views {
+
+}
+
+package es.uji.agdc.controllers {
+
+}
+
+@enduml

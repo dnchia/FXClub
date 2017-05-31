@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="corporativeBrandSpace" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <ImageView fx:id="brandImageContainer" fitHeight="120.0" fitWidth="550.0" pickOnBounds="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image fx:id="brandImage" url="/images/prueba_logo.jpg" />
+         </image>
+         <BorderPane.margin>
+            <Insets bottom="30.0" />
+         </BorderPane.margin></ImageView>
+   </top>
+</BorderPane>

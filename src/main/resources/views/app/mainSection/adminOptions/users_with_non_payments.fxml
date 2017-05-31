@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uji.agdc.videoclub.controllers.SlowPayersSectionController">
+   <center>
+      <TableView fx:id="slowPayers_TableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="slowPayers_DNI_tableColumn" prefWidth="86.0" text="DNI">
+              <cellValueFactory>
+                  <PropertyValueFactory property="dni" />
+              </cellValueFactory>
+          </TableColumn>
+
+          <TableColumn fx:id="slowPayers_Name_tableColumn" prefWidth="75.0" text="Nombre">
+              <cellValueFactory>
+                  <PropertyValueFactory property="name" />
+              </cellValueFactory>
+          </TableColumn>
+
+            <TableColumn fx:id="slowPayers_Dir_tableColumn" prefWidth="117.0" text="Dirección">
+                <cellValueFactory>
+                    <PropertyValueFactory property="address" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="slowPayers_Username_tableColumn" text="Usuario">
+                <cellValueFactory>
+                    <PropertyValueFactory property="username" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="slowPayers_months_tableColumn" prefWidth="201.0" text="Meses que adeuda">
+                <cellValueFactory>
+                    <PropertyValueFactory property="unpaidMonths" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+          <FXCollections fx:factory="emptyObservableList" />
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <top>
+      <VBox alignment="TOP_CENTER" prefHeight="80.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Usuarios con impagos">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </Separator>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <Button fx:id="slowPayers_close_button" mnemonicParsing="false" onAction="#closeWindow" text="Cerrar" BorderPane.alignment="TOP_RIGHT">
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+</BorderPane>

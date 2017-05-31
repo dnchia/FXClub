@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainSection_root_container" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uji.agdc.videoclub.controllers.MainSectionController">
+    <left>
+        <HBox>
+            <fx:include source="profile/profile_section.fxml" />
+            <Separator orientation="VERTICAL" />
+            <BorderPane.margin>
+                <Insets right="10.0" />
+            </BorderPane.margin>
+        </HBox>
+    </left>
+    <center>
+        <TabPane fx:id="tabs">
+            <Tab fx:id="searchTab" closable="false" text="Búsqueda de películas">
+                <BorderPane fx:id="mainSection_search_result_container">
+                    <top>
+                        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1">
+                            <center>
+                                <TextField fx:id="searchBar_textField" BorderPane.alignment="CENTER">
+                                    <BorderPane.margin>
+                                        <Insets left="40.0" />
+                                    </BorderPane.margin>
+                                </TextField>
+                            </center>
+                            <right>
+                                <Button fx:id="searchBar_button" mnemonicParsing="false" onAction="#searchMovies" text="Buscar películas" BorderPane.alignment="CENTER">
+                                    <BorderPane.margin>
+                                        <Insets left="40.0" right="80.0" />
+                                    </BorderPane.margin>
+                                </Button>
+                            </right>
+                            <bottom>
+                                <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+                            </bottom>
+                     <left>
+                        <ChoiceBox fx:id="searchBy_ChoiceBox" onAction="#checkChoiceBox" prefHeight="26.0" prefWidth="130.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets left="40.0" />
+                           </BorderPane.margin>
+                        </ChoiceBox>
+                     </left>
+                        </BorderPane>
+                    </top>
+                    <center>
+                        <BorderPane minHeight="300.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1">
+                            <top>
+                                <VBox alignment="TOP_CENTER" BorderPane.alignment="TOP_CENTER">
+                                    <Label fx:id="search_label" text="No se ha realizado ninguna búsqueda" BorderPane.alignment="CENTER">
+                                        <font>
+                                            <Font size="24.0" />
+                                        </font>
+                                        <padding>
+                                            <Insets bottom="20.0" top="20.0" />
+                                        </padding></Label>
+                                </VBox>
+                            </top>
+                            <center>
+                                <ScrollPane pannable="true">
+                           <content>
+                              <VBox fx:id="searchResult_VBox" alignment="TOP_CENTER" prefHeight="330.0" prefWidth="780.0" spacing="10.0" />
+                           </content>
+                                </ScrollPane>
+                            </center>
+                        </BorderPane>
+                    </center>
+                    <BorderPane.margin>
+                        <Insets bottom="10.0" right="10.0" />
+                    </BorderPane.margin>
+               <padding>
+                  <Insets bottom="20.0" right="20.0" />
+               </padding>
+                </BorderPane>
+            </Tab>
+            <Tab fx:id="adminTab" closable="false" text="Opciones administrativas">
+                <fx:include source="adminOptions/admin_section.fxml" />
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>

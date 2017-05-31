@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" minHeight="300.0" minWidth="300.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+
+    </center>
+    <bottom>
+        <Label fx:id="root_CorporativeInfo" text="EI1048 - Aplicación videoclub (2016-2017)" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+         <font>
+            <Font size="9.0" />
+         </font></Label>
+    </bottom>
+    <center>
+
+    </center>
+</BorderPane>

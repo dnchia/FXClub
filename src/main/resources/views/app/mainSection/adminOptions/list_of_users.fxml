@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxWidth="1000.0" prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uji.agdc.videoclub.controllers.UsersListController">
+   <center>
+       <TableView fx:id="users_TableView" prefHeight="360.0" prefWidth="720.0" BorderPane.alignment="CENTER">
+           <columns>
+               <TableColumn fx:id="DNI_TableColumn" prefWidth="69.99998474121094" text="DNI">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="dni" />
+                   </cellValueFactory>
+               </TableColumn>
+               <TableColumn fx:id="completeName_TableColumn" prefWidth="140.0" text="Nombre completo">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="name" />
+                   </cellValueFactory>
+               </TableColumn>
+               <TableColumn fx:id="address_TableColumn" prefWidth="75.0" text="Dirección">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="address" />
+                   </cellValueFactory>
+               </TableColumn>
+               <TableColumn fx:id="phone_TableColumn" prefWidth="75.0" text="Teléfono">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="phone" />
+                   </cellValueFactory>
+               </TableColumn>
+               <TableColumn fx:id="email_TableColumn" prefWidth="150.0" text="Correo electrónico">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="email" />
+                   </cellValueFactory>
+               </TableColumn>
+               <TableColumn fx:id="lastPayment_TableColumn" prefWidth="150.0" text="Fecha último pago">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="lastPayment" />
+                   </cellValueFactory>
+               </TableColumn>
+               <TableColumn fx:id="username_TableColumn" prefWidth="150.0" text="Nombre de usuario">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="username" />
+                   </cellValueFactory>
+               </TableColumn>
+               <TableColumn fx:id="role_TableColumn" prefWidth="60.0" text="Rol">
+                   <cellValueFactory>
+                       <PropertyValueFactory property="role" />
+                   </cellValueFactory>
+               </TableColumn>
+           </columns>
+           <FXCollections fx:factory="emptyObservableList" />
+       </TableView>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="673.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="editUser_button" mnemonicParsing="false" onAction="#editSelectedUser" text="Editar seleccionado" />
+            <Button fx:id="deleteUser_button" mnemonicParsing="false" onAction="#deleteSelectedUser" text="Eliminar seleccionado">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

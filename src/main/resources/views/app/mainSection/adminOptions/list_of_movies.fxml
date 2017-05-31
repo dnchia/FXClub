@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxWidth="1000.0" prefHeight="400.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.uji.agdc.videoclub.controllers.MoviesListController">
+    <center>
+        <TableView fx:id="movies_TableView" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="title_TableColumn" prefWidth="60.0" text="Título">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="title" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="titleOV_TableColumn" prefWidth="150.0" text="Título VO">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="titleOv" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="year_TableColumn" prefWidth="75.0" text="Año de estreno">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="year" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="actors_TableColumn" prefWidth="75.0" text="Actores">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="actors"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="directors_TableColumn" prefWidth="150.0" text="Directores">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="directors" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="genres_TableColumn" prefWidth="150.0" text="Géneros">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="genres" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="description_TableColumn" prefWidth="150.0" text="Descripción">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="description" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="availableCopies_TableColumn" prefWidth="60.0" text="Copias disponibles">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="availableCopies" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="673.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="editMovie_button" onAction="#editSelectedMovie" mnemonicParsing="false" text="Editar seleccionada" />
+                <Button fx:id="deleteMovie_button" onAction="#disableSelectedMovie" mnemonicParsing="false" text="Deshabilitar seleccionada">
+                    <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>
